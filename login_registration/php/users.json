@@ -1,0 +1,22 @@
+{
+    "admin@example.com": {
+        "password": "admin123",
+        "name": "Admin User"
+    },
+    "test@example.com": {
+        "password": "test123",
+        "name": "Test User"
+    },
+    "user@example.com": {
+        "password": "password123",
+        "name": "Normal User"
+    },
+    "demo@antigravity.com": {
+        "password": "demo123",
+        "name": "Demo Account"
+    },
+    "name@example.com": {
+        "password": "kkkkjjjj",
+        "name": "John Doe"
+    }
+}

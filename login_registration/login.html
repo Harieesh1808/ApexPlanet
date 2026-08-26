@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Antigravity Auth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light min-vh-100 d-flex flex-column">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary d-flex align-items-center gap-2" href="index.html">
+                <i class="bi bi-layers-fill fs-3"></i>
+                AntiAuth
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#features">Features</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 me-lg-3 me-3">
+                        <a class="btn btn-primary px-4 mb-2 mb-lg-0 w-100" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success bg-white px-4 w-100" href="register.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <div class="card auth-card border-0 shadow-lg rounded-4 overflow-hidden fade-in-up">
+                        <div class="card-body p-4 p-sm-5">
+                            <div class="text-center mb-4">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex p-3 mb-3">
+                                    <i class="bi bi-person-circle fs-1"></i>
+                                </div>
+                                <h2 class="fw-bold text-dark">Welcome Back</h2>
+                                <p class="text-muted">Please enter your details to sign in.</p>
+                            </div>
+
+                            <form id="loginForm" novalidate>
+                                <!-- Alert for general form errors -->
+                                <div id="loginAlert" class="alert d-none" role="alert"></div>
+
+                                <div class="mb-4 position-relative">
+                                    <label for="loginEmail" class="form-label fw-medium text-dark">Email Address</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control border-start-0 ps-0 focus-ring-none" id="loginEmail" placeholder="name@example.com" required>
+                                        <div class="invalid-feedback">
+                                            Please enter a valid email address.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4 position-relative">
+                                    <label for="loginPassword" class="form-label fw-medium text-dark">Password</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-lock"></i></span>
+                                        <input type="password" class="form-control border-start-0 border-end-0 px-0 focus-ring-none" id="loginPassword" placeholder="Enter your password" required>
+                                        <button class="btn btn-outline-secondary bg-white border-start-0 border text-muted toggle-password" type="button" data-target="loginPassword" aria-label="Toggle password visibility">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <div class="invalid-feedback">
+                                            Password is required.
+                                        </div>
+                                    </div>
+                                    <div id="capsLockWarning-loginPassword" class="form-text text-warning d-none mt-1 fw-bold small">
+                                        <i class="bi bi-exclamation-triangle-fill me-1"></i> Caps Lock is ON
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input focus-ring-primary" type="checkbox" id="rememberMe">
+                                        <label class="form-check-label text-muted" for="rememberMe">
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <a href="forgot-password.html" class="text-primary text-decoration-none fw-medium small">Forgot password?</a>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary w-100 py-2 py-sm-3 fw-semibold shadow-sm mb-4 btn-hover-elevate">
+                                    Sign In
+                                </button>
+                                
+                                <div class="text-center">
+                                    <span class="text-muted">Don't have an account?</span>
+                                    <a href="register.html" class="text-primary text-decoration-none fw-semibold ms-1">Sign up</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4 mt-auto">
+        <div class="container text-center">
+            <p class="text-muted mb-0">&copy; 2026 AntiAuth Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/session.js"></script>
+</body>
+</html>

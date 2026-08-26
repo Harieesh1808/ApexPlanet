@@ -1,0 +1,357 @@
+ANTIGRAVITY PROJECT INSTRUCTIONS
+Interactive UI & Frontend Development — TASK 2
+Timeline: Days 13–24
+
+PROJECT GOAL
+Build a polished, responsive, user-friendly Login and Registration web interface using HTML5, CSS3, JavaScript, and Bootstrap 5. The final result must be mobile-first, visually modern, interactive, and ready to demonstrate in a 3–5 minute video.
+
+IMPORTANT
+- Complete the project end-to-end.
+- Do not leave placeholder sections, broken links, console errors, or unfinished UI.
+- Keep the implementation clean, organized, reusable, and easy to understand.
+- Use Bootstrap 5 for layout/components while adding custom CSS for branding and visual polish.
+- The project is frontend-focused, but include the requested AJAX/PHP demonstration structure.
+- If a PHP/MySQL backend is not required to run the UI, keep backend integration lightweight and clearly separated so the frontend works immediately.
+
+1. BOOTSTRAP 5 MASTERY
+
+Use Bootstrap 5 properly throughout the project.
+
+Required:
+- Bootstrap grid system: rows, columns, and responsive breakpoints.
+- Responsive Navbar.
+- Bootstrap Cards, Modals, Buttons, Forms, Alerts, and utility classes where appropriate.
+- Responsive utility classes such as d-none, d-md-block, d-md-none, etc.
+- Mobile-first responsive design.
+- Avoid unnecessary custom CSS when a Bootstrap utility/component already solves the requirement.
+
+The interface must look correct at:
+- Mobile phones
+- Tablets
+- Laptops
+- Desktop screens
+
+2. CUSTOM STYLING
+
+Create a consistent custom design system.
+
+Requirements:
+- Define a professional custom color palette for branding.
+- Use CSS variables for primary, secondary, accent, background, text, and border colors.
+- Add smooth hover effects to buttons, links, cards, navbar items, and interactive elements.
+- Add subtle transitions and animations without making the UI distracting.
+- Use Google Fonts and suitable icons (preferably Bootstrap Icons).
+- Maintain good spacing, typography, contrast, alignment, and accessibility.
+- Do not use excessive gradients, animations, or visual clutter.
+
+Suggested visual direction:
+- Modern professional SaaS/portfolio-style authentication interface.
+- Clean white/light surfaces with a strong teal/blue brand accent.
+- Rounded cards, subtle shadows, smooth transitions.
+- Login and registration pages should feel like part of the same product.
+
+3. FORM HANDLING WITH JAVASCRIPT
+
+Implement client-side validation for both Login and Registration forms.
+
+LOGIN FORM
+Include:
+- Email/username field.
+- Password field.
+- Show/Hide Password control.
+- Required-field validation.
+- Valid email format validation if email is used.
+- Clear inline validation/error messages.
+- Prevent submission when validation fails.
+- Show a success state when valid.
+
+REGISTRATION FORM
+Include:
+- Full name.
+- Email.
+- Password.
+- Confirm password.
+- Show/Hide password controls.
+- Required-field validation.
+- Email format validation.
+- Password strength validation.
+- Password and confirm-password match validation.
+- Clear inline validation/error messages.
+- Prevent submission when invalid.
+- Show a success state when valid.
+
+UX REQUIREMENTS
+- Do not rely only on browser default validation messages.
+- Use JavaScript to provide friendly validation feedback.
+- Validation should happen on submit and, where useful, while the user is entering data.
+- Password visibility buttons must work correctly.
+- Avoid page reloads for validation-only interactions.
+
+4. AJAX BASICS
+
+Demonstrate AJAX/fetch functionality.
+
+Required example:
+- Use JavaScript fetch/AJAX to send data to a PHP endpoint without reloading the page.
+- Create a simple PHP endpoint such as check-user.php or api/check-user.php.
+- The endpoint can use dummy/mock logic if a database is not necessary.
+- Demonstrate checking whether a username/email already exists.
+- Display the result dynamically in the registration form.
+
+Example flow:
+1. User enters an email.
+2. JavaScript sends the email to the PHP endpoint using fetch().
+3. PHP returns JSON.
+4. JavaScript displays an available/already-registered message.
+5. The page does not reload.
+
+Handle:
+- Loading state.
+- Successful response.
+- Existing user response.
+- Network/server error.
+- Invalid input.
+
+If PHP execution is unavailable in the preview environment, keep the frontend functional and provide a clearly documented fallback/mock response while preserving the real PHP endpoint for deployment.
+
+5. PROJECT DEVELOPMENT
+
+Create the following pages/components:
+
+PAGES
+- index.html or a suitable landing/authentication entry page.
+- login.html.
+- register.html.
+
+If a single-page authentication flow is more appropriate, it is acceptable to combine login and registration into one polished page, but separate pages are preferred for demonstrating navigation.
+
+REUSABLE COMPONENTS
+- Responsive Navbar.
+- Footer.
+- Authentication card/container.
+- Reusable form styling.
+- Reusable buttons.
+- Alerts/validation messages.
+- Modal if useful.
+
+NAVIGATION
+- Navbar links must work.
+- Login page must link to Registration.
+- Registration page must link to Login.
+- Logo/brand must return to the main page.
+- Footer links must not be broken.
+
+6. RESPONSIVE UI REQUIREMENTS
+
+Use a mobile-first approach.
+
+Check:
+- No horizontal scrolling.
+- Images never overflow their containers.
+- Text wraps correctly.
+- Forms remain usable on small screens.
+- Buttons are easy to tap.
+- Navbar collapses correctly on mobile.
+- Authentication card adapts to different screen sizes.
+- Desktop layout uses available space without becoming excessively wide.
+
+Use responsive images with:
+- img-fluid
+- object-fit where appropriate
+- sensible max-width/max-height rules
+
+7. ACCESSIBILITY
+
+Include:
+- Proper labels for every form input.
+- Meaningful button text.
+- Keyboard-accessible controls.
+- Visible focus states.
+- Adequate color contrast.
+- aria-label/aria-describedby where useful.
+- Semantic HTML5 elements.
+- Do not use icons alone when their purpose is unclear.
+
+8. CODE QUALITY
+
+Organize files clearly.
+
+Recommended structure:
+
+project/
+├── index.html
+├── login.html
+├── register.html
+├── css/
+│   └── style.css
+├── js/
+│   ├── validation.js
+│   ├── auth.js
+│   └── ajax.js
+├── php/
+│   └── check-user.php
+├── assets/
+│   ├── images/
+│   └── icons/
+└── README.md
+
+If the existing project already has a structure, preserve it where practical and improve it rather than unnecessarily rebuilding everything.
+
+Code requirements:
+- Use meaningful variable and function names.
+- Add comments only where they improve understanding.
+- Avoid duplicated JavaScript/CSS.
+- Keep HTML, CSS, JS, and PHP logically separated.
+- No unnecessary libraries or frameworks beyond Bootstrap 5 and Bootstrap Icons/Google Fonts.
+- No console errors.
+- No broken asset paths.
+
+9. VISUAL POLISH
+
+Make the final UI presentation-ready.
+
+Include:
+- Branded header/navbar.
+- Attractive authentication hero/side visual where appropriate.
+- Clean Login card.
+- Clean Registration card.
+- Consistent button styles.
+- Smooth hover/focus/transition effects.
+- Password visibility icons.
+- Validation feedback.
+- Loading state for AJAX.
+- Success/error alerts.
+- Responsive footer.
+
+Animations should include subtle effects such as:
+- Fade/slide-in on authentication card.
+- Button hover transition.
+- Input focus transition.
+- Alert appearance transition.
+
+Respect prefers-reduced-motion where practical.
+
+10. ASSET HANDLING
+
+Ensure all images, icons, fonts, and other assets load correctly.
+
+IMPORTANT:
+- Use correct relative paths.
+- Do not reference files that do not exist.
+- Prefer local assets when they are provided by the project.
+- If an external image is used, use a reliable HTTPS URL.
+- Set appropriate width/height or responsive CSS so images do not distort the layout.
+- Use alt text for meaningful images.
+- Verify every image path before finalizing.
+
+11. BOOTSTRAP SETUP
+
+Use Bootstrap 5 via CDN unless the existing project already contains a local Bootstrap installation.
+
+Include:
+- Bootstrap CSS.
+- Bootstrap JS bundle where components such as navbar collapse or modal require it.
+- Bootstrap Icons if icons are used.
+
+Do not mix Bootstrap 4 and Bootstrap 5 syntax.
+
+12. FUNCTIONAL TESTING CHECKLIST
+
+Before declaring the task complete, test:
+
+NAVIGATION
+- [ ] Navbar works on desktop.
+- [ ] Navbar collapses on mobile.
+- [ ] All internal links work.
+- [ ] Logo/home link works.
+
+LOGIN
+- [ ] Empty fields show validation.
+- [ ] Invalid email shows validation.
+- [ ] Password field works.
+- [ ] Show/hide password works.
+- [ ] Valid form shows success state.
+- [ ] Invalid form does not submit.
+
+REGISTRATION
+- [ ] Empty fields show validation.
+- [ ] Invalid email shows validation.
+- [ ] Weak/invalid password is rejected.
+- [ ] Password mismatch is rejected.
+- [ ] Show/hide password works.
+- [ ] Confirm password works.
+- [ ] Valid form shows success state.
+
+AJAX
+- [ ] Email/username availability check works.
+- [ ] fetch/AJAX does not reload the page.
+- [ ] Loading state appears.
+- [ ] Success response is handled.
+- [ ] Existing-user response is handled.
+- [ ] Error response is handled.
+- [ ] PHP endpoint returns valid JSON.
+
+RESPONSIVENESS
+- [ ] Mobile layout works.
+- [ ] Tablet layout works.
+- [ ] Desktop layout works.
+- [ ] No horizontal overflow.
+- [ ] Images scale correctly.
+
+QUALITY
+- [ ] No broken images.
+- [ ] No missing CSS/JS files.
+- [ ] No 404 asset requests.
+- [ ] No JavaScript console errors.
+- [ ] No invalid HTML caused by missing/incorrect closing tags.
+- [ ] Consistent branding across pages.
+
+13. FINAL DELIVERABLE
+
+The final project must demonstrate all major requirements from TASK 2:
+
+1. Bootstrap 5 mastery.
+2. Custom branding and styling.
+3. Smooth transitions and hover effects.
+4. Google Fonts and icons.
+5. Login and registration forms.
+6. JavaScript form validation.
+7. Password match validation.
+8. Show/hide password.
+9. AJAX/fetch example with PHP.
+10. Dummy username/email existence check.
+11. Responsive Login UI.
+12. Responsive Registration UI.
+13. Reusable Navbar and Footer.
+14. Mobile-first responsive design.
+15. Clean project structure.
+16. Presentation-ready visual quality.
+
+README.md should include:
+- Project title.
+- Project objective.
+- Technologies used.
+- Features implemented.
+- Folder structure.
+- How to run the project.
+- How to run PHP/AJAX locally.
+- Brief explanation of the AJAX flow.
+- Screenshots if appropriate.
+
+FINAL INSTRUCTION TO ANTIGRAVITY
+
+Inspect the existing project before making changes. Implement every requirement above in the existing codebase where possible. Do not merely describe what needs to be done—actually create/update the required files and functionality.
+
+After implementation:
+1. Run/test the project.
+2. Fix all visible UI problems.
+3. Fix broken image paths and asset loading issues.
+4. Fix responsive layout issues.
+5. Fix JavaScript errors.
+6. Verify Login and Registration validation.
+7. Verify password visibility controls.
+8. Verify AJAX/PHP behavior or the documented mock fallback.
+9. Verify Bootstrap navbar/components.
+10. Verify that no required feature is missing.
+11. Keep the final UI professional and suitable for a 3–5 minute demo.
+12. Provide a concise final summary of files changed, features completed, and how to run the project.

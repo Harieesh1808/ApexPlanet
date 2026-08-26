@@ -1,0 +1,194 @@
+/* 
+ * Antigravity Auth Custom Styles 
+ * A modern SaaS style design system with a strong teal/blue accent
+ */
+
+:root {
+    /* Brand Colors */
+    --bs-primary: #0d9488; /* Teal 600 */
+    --bs-primary-rgb: 13, 148, 136;
+    --bs-primary-hover: #0f766e; /* Teal 700 */
+    
+    --bs-info: #0284c7; /* Sky 600 */
+    
+    /* Background & Surface */
+    --bg-light: #f8fafc; /* Slate 50 */
+    --surface: #ffffff;
+    
+    /* Text */
+    --text-dark: #0f172a; /* Slate 900 */
+    --text-muted: #64748b; /* Slate 500 */
+    
+    /* Transitions */
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light) !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Overrides for Bootstrap Utilities */
+.text-primary { color: var(--bs-primary) !important; }
+.bg-primary { background-color: var(--bs-primary) !important; }
+.bg-light { background-color: var(--bg-light) !important; }
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    transition: all var(--transition-fast);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: var(--bs-primary-hover) !important;
+    border-color: var(--bs-primary-hover) !important;
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    transition: all var(--transition-fast);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+.btn-hover-elevate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.3), 0 4px 6px -2px rgba(13, 148, 136, 0.15) !important;
+}
+
+/* Forms */
+.form-control {
+    padding: 0.75rem 1rem;
+    border-color: #e2e8f0;
+    transition: all var(--transition-fast);
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    border-color: var(--bs-primary);
+}
+
+/* For input groups, we handle focus ring manually on the container or visually hide it on the input */
+.input-group:focus-within .input-group-text,
+.input-group:focus-within .form-control,
+.input-group:focus-within .btn {
+    border-color: var(--bs-primary);
+}
+
+.input-group-text {
+    background-color: transparent;
+    border-color: #e2e8f0;
+    transition: border-color var(--transition-fast);
+}
+
+/* Specific focus ring removal since input-group:focus-within handles visual state */
+.focus-ring-none:focus {
+    box-shadow: none !important;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.form-check-input:checked {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.form-check-input:focus {
+    border-color: rgba(var(--bs-primary-rgb), 0.5);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Toggle Password Button */
+.toggle-password {
+    transition: all var(--transition-fast);
+}
+.toggle-password:hover {
+    background-color: #f1f5f9;
+}
+.toggle-password:focus {
+    box-shadow: none !important;
+}
+
+/* Cards & Layout */
+.auth-card {
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Validation Styles */
+.is-invalid + .invalid-feedback {
+    display: block;
+}
+
+/* Custom indicator for AJAX */
+.is-loading-email {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle fill='%230d9488' stroke='%230d9488' stroke-width='15' r='15' cx='40' cy='100'%3E%3Canimate attributeName='opacity' calcMode='spline' dur='2' values='1;0;1;' keySplines='.5 0 .5 1;.5 0 .5 1' repeatCount='indefinite' begin='-.4'/%3E%3C/circle%3E%3Ccircle fill='%230d9488' stroke='%230d9488' stroke-width='15' r='15' cx='100' cy='100'%3E%3Canimate attributeName='opacity' calcMode='spline' dur='2' values='1;0;1;' keySplines='.5 0 .5 1;.5 0 .5 1' repeatCount='indefinite' begin='-.2'/%3E%3C/circle%3E%3Ccircle fill='%230d9488' stroke='%230d9488' stroke-width='15' r='15' cx='160' cy='100'%3E%3Canimate attributeName='opacity' calcMode='spline' dur='2' values='1;0;1;' keySplines='.5 0 .5 1;.5 0 .5 1' repeatCount='indefinite' begin='0'/%3E%3C/circle%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.email-available {
+    border-color: #198754 !important;
+}
+.email-available:focus {
+    border-color: #198754 !important;
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25) !important;
+}
+.input-group-text.email-available {
+    border-color: #198754 !important;
+    color: #198754 !important;
+}
+
+/* Animations */
+.fade-in-up {
+    animation: fadeInUp var(--transition-normal) forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fade-in-up {
+        animation: none;
+    }
+    .btn-hover-elevate:hover {
+        transform: none;
+    }
+}
+
+/* Hero Section Utilities */
+.hero-visual {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* Custom Hover Colors */
+.btn-hover-text-green {
+    transition: all 0.3s ease;
+}
+.btn-hover-text-green:hover, .btn-hover-text-green:focus, .btn-hover-text-green:active { 
+    color: #198754 !important; 
+    background-color: #ffffff !important;
+    border-color: #198754 !important;
+}
